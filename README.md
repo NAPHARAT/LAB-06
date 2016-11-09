@@ -23,7 +23,7 @@
 
 จากการทดลองข้างต้น พบว่าเมื่อรันโค้ดแล้ว หน้าต่างจะแสดงผลตัวเลขหลักแรกจากทางซ้ายมือ ดังภาพ
 
-![]()
+![](https://github.com/NAPHARAT/LAB-06/blob/master/imgs/2.2.JPG)
 
 ###คำถาม 6.1 ถ้าพิมพ์ตัวอักษรจำนวนหลายๆ ตัวแล้วกด Enter จะได้ผลอย่างไร ทำไมจึงเป็นเช่นนั้น
 
@@ -46,7 +46,7 @@
 
 จากการทดลองข้างต้น พบว่าเมื่อทำการรันจะแสดงผล แล้วป้อนอักษรที่ต้องการ กด Enter จะแสดงอักษรดังกล่าว ดังภาพ
 
-![]()
+![](https://github.com/NAPHARAT/LAB-06/blob/master/imgs/3.2.JPG)
 
 4).	โปรแกรมสำหรับรับค่าตัวเลข เนื่องจากคำสั่ง ```Read()``` และ ```ReadLine()``` จะรับเฉพาะตัวอักษร การรับตัวเลข เราต้องใช้เมธอด TryParse() มาช่วยแปลงค่า
 
@@ -59,7 +59,7 @@
 
 จาการทดลอง เมื่อรันโค้ด การแสดงผลจะออกตามเลขที่เราป้อนไป
 
-![]()
+![](https://github.com/NAPHARAT/LAB-06/blob/master/imgs/4.2.JPG)
 
 ###คำถาม 6.3 ถ้าเราป้อนตัวอักษรลงไปแทนที่ตัวเลข จะเกิดอะไรขึ้น มีวิธีการป้องกันหรือแก้ไขอย่างไร
 
@@ -76,7 +76,7 @@
 
 จากการทดลอง พบว่าเมื่อรันโค้ดแล้ว ป้อนค่าลงในตัวแปร val1 และ val2 แล้วกด Enter ก็จะได้ค่าที่บวกกัน ดังภาพ
 
-![]()
+![](https://github.com/NAPHARAT/LAB-06/blob/master/imgs/5.2.JPG)
 
 ###คำถาม 6.4 ถ้าเราป้อนตัวอักษรลงไปแทนที่ตัวเลข จะเกิดอะไรขึ้น เหมือนหรือต่างจากโปรแกรมก่อนหน้านี้อย่างไร
 
@@ -91,8 +91,44 @@
 ``` ID : (ป้อนรหัสนักศึกษา).```
 
 ``` GPA : (ป้อนเกรดเฉลี่ยนักศึกษา โดยมีทศนิยมสองหลัก).```
+```
+
+using System;
+
+namespace Lab6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                string Name,LastName,GA;
+                Console.Write("Enter Name : ");
+                Name = Console.ReadLine();
+                Console.Write("Enter LastName : ");
+                LastName = Console.ReadLine();
+                Console.Write("Enter ID : ");
+                int ID = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter GPA : ");
+                GA = Console.ReadLine();
+                float GPA = float.Parse(GA);
+                Console.WriteLine("Name = " + Name);
+                Console.WriteLine("LastName = " + LastName);
+                Console.WriteLine("ID = " + ID);
+                Console.WriteLine("GPA :{0:F2}", GPA);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error : " + e.ToString());
+            }
+        }
+    }
+}
+
+```
 
 
-
+![](https://github.com/NAPHARAT/LAB-06/blob/master/imgs/last.JPG)
 
 
